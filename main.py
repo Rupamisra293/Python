@@ -1,10 +1,14 @@
-#input a word
-text = str(input("Enter a string: "))
+# Storing Values
+tree1 = 98
+tree2 = 94
+tree3 = 41
+tree4 = 95
+tree5 = 11
 
-# Reverse String 
-# using step value as -1 to iterate in reverse
-revText = text[::-1] 
-text = revText
+# Finding the total of trees
+sum = tree1+tree2+tree3+tree4+tree5
+print("the sum of all the 5 trees is: ", sum)
 
-print("Reverse of Given String is:")
-print(text)
+# Finding the average of trees
+average = sum/5
+print("the average of all the tree is :", average)
