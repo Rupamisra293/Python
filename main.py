@@ -1,15 +1,13 @@
-# take marks as input from user
-print("Enter Marks Obtained in 4 Subjects: ")
-math = int(input("maths :"))
-english = int(input("english :"))
-science = int(input("science :"))
-hindi = int(input("hindi :"))
+print("Enter the Number of Days: ")
+num = int(input())
 
-# Let's calculate the percentage of marks
-sum = math+english+science+hindi
-print("sun of math,english,science and hindi")
+year = int(num/365)
+week = int((num%365)/7)
+days = int((num%365)%7)
 
-perc = (sum/400)*100
-
-print(end="Percentage Mark = ")
-print(perc)
+print("Total Number of Year(s): ")
+print(year)
+print("Total Number of Week(s):")
+print(week)
+print("Total Number of Day(s):")
+print(days)
