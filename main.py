@@ -1,12 +1,15 @@
-# Taking total amount as input from user
-Amount =int(input("Please Enter Amount for Withdraw :"))
+# take marks as input from user
+print("Enter Marks Obtained in 4 Subjects: ")
+math = int(input("maths :"))
+english = int(input("english :"))
+science = int(input("science :"))
+hindi = int(input("hindi :"))
 
-# Calculating the number of notes of different denominations
-note_1 = Amount//100
-note_2 = (Amount%100)//50
-note_3 = ((Amount%100)%50)//10
+# Let's calculate the percentage of marks
+sum = math+english+science+hindi
+print("sun of math,english,science and hindi")
 
+perc = (sum/400)*100
 
-print( "notes of 100 rupee" , note_1)
-print("notes of 50 rupee" , note_2)
-print("notes of 10 rupee" , note_3)
+print(end="Percentage Mark = ")
+print(perc)
