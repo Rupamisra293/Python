@@ -1,29 +1,26 @@
-print("Hello World")
-print("\n")
-print("Goodbye!\nSee you later!")
-print("Have a great day!")
-print('Hi! How are you?')
-print('''This is a multi-line
-print statement.''')
-print('''This is another multi-line
-print statement.''')
+#creating variables
+a = 5
+b = 10
+c = a + b
+print(c)
+# Output: 15
+d = b - a
+print(d)
+# Output: 5
 
-print(5)
-print(5 + 3)
-print(10 - 2)
-print(4 * 2)
-print(16 / 2)
-print(5 ** 2)   
-print(10 % 3)
-print(10 // 3)  
+print("Sum of", a, "and", b, "is", c)
 
-print("Hello" + " " + "World")
-print("Hello" * 3)
-print("Repeat! " * 5)
-print("Hello" + "!" * 3)
-print("Ha" * 4 + "!")
+print("Difference of", b, "and", a, "is", d)
 
-print("welcome to", end="**")
+name = "Codingal"
+greeting = "Hello, " + name + "!"
+print(greeting)
+
+name = input("Enter your name: ")
+print("Hello, " + name + "! Welcome to Codingal.")
+age = int(input("Enter your age: "))
+next_year_age = age + 1
+print("Next year, you will be", next_year_age, "years old.")
 
 
 
