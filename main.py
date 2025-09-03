@@ -1,14 +1,32 @@
-#Take input for the student that he can attend the exam or not
-medical_cause=input("did you have a medical cause Y or N: ")
-#Take input of the attendance
-atten = int(input("enter the attendance of the student: "))
+# Take input of number of units consumed from the user
+units = int(input(" Please enter Number of Units you Consumed : "))
 
-#checking the user input predicting output accordingly
+# Check conditions of units consumed 
+# Then calculate amount and surcharge accordingly
+# surcharge is the tax value
 
-if medical_cause == 'Y': #checking the condition 1
-  print ("You are allowed")
+# Check for units less than 50
+if(units < 50):
+    amount = units * 2.60 
+    surcharge = 25 
+
+# Check for units less than 100
+elif(units <= 100):
+    amount = 130 + ((units - 50) * 3.25)
+    surcharge = 35
+
+# Check for units less than or equal to 200
+elif(units <= 200):
+    amount = 130 + 162.50 + ((units - 100) * 5.26)
+    surcharge = 45
+
+# Check for all the cases other than mentioned 
+# When units consumed are more than 200
 else:
-  if atten>=75:  #checking the condition 2
-    print ("Allowed")
-  else:
-    print ("Not allowed")
+    amount = 130 + 162.50 + 526 + ((units - 200) * 8.45)
+    surcharge = 75
+
+# Calculate and Display the total electricity bill
+# total amount = amount + surcharge
+total = amount + surcharge
+print("\nElectricity Bill = %.2f"  %total)
