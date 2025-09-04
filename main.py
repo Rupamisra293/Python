@@ -1,15 +1,14 @@
 #Take input from user
-num1 = float(input(" Please Enter the First Value  Num1 : "))
-num2 = float(input(" Please Enter the Second Value Num2 : "))
-
-#calculate the HCF of user entered number
-while(num2 != 0):
-    temp = num2
-    num2 = num1 % num2
-    num1 = temp
-
-hcf = num1   
+num = int(input("Enter a number: "))
+rev = 0
+#checking each digit are the same backward and forward
+temp = num
+while temp>0:
+    rem = temp%10
+    rev = rem + (rev*10)
+    temp = int(temp/10)
 #display the result
-print("HCF of num1 and num2 is",hcf)
-
-
+if rev==num:
+    print("\nIt is a Palindrome Number")
+else:
+    print("\nIt is not a Palindrome Number")
