@@ -1,12 +1,11 @@
-#input a digit, letter or special character
-ch = input("Please Enter Your Own Character : ")
+#Take input from user
+print("Check your is between 10 to 20 years or not")
+x = int(input("enter your age: "))
 
-if((ch >= 'a' and ch <= 'z') or (ch >= 'A' and ch <= 'Z')): 
-  #check the alphabat
-    print("The Given Character ", ch, "is an Alphabet") 
-elif(ch >= '0' and ch <= '9'): 
-  #check the digit
-    print("The Given Character ", ch, "is a Digit")
-else: 
-  #check the character other than character and digit
-    print("The Given Character ", ch, "is a Special Character")
+
+if x > 10: #condition 1
+  print("Your age is more than 10 years")
+  if x > 20: #nested condition
+    print("And it is more than 20 as well")
+  else:
+    print("But it is less not more than 20")
