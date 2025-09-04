@@ -1,10 +1,15 @@
-num = int(input("Enter any number\n"))
-
-
+#Take input of a word
+string = input("Please enter your own word : ")
+#take input of a character
+char = input("Please enter your own Character : ")
+i = 0
 count = 0
+#loop will to find the occurence of character
+while(i < len(string)): #string operation
 
-while num != 0:
-  count+=1
-  num=num//10
+    if(string[i] == char): #condition 1
+        count = count + 1
+    i = i + 1
 
-print(count)
+#Display the result
+print("The total Number of Times ", char, " has Occurred = " , count)
