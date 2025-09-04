@@ -1,15 +1,11 @@
-#take input from user
-text = input(("Enter a sentence: "))
-text = text.split()
-bigWordLen = 0 #initialise
+#Take input of a string
+str1 = input("Please Enter a sentence: ")
+total = 1 #initialise
 
-for wrd in text: #iterate loop
-  wrdLen = len(wrd) #string operation
-  if wrdLen>bigWordLen: #condition 1
-    bigWordLen = wrdLen
+for i in range(len(str1)): 
+#loop will run to calculate the length using string operation
+    if(str1[i] == ' ' ):
+    #condition 1
+        total = total + 1
 
-print("\nLargest Word: ")
-for wrd in text: 
-  wrdLen = len(wrd)
-  if wrdLen==bigWordLen: #condition 2
-    print(wrd) #display result
+print("Total Number of Words in this String = ", total)
