@@ -1,18 +1,15 @@
-# take input from the user
-num = int(input("Enter a number: "))
+#Take input from user
+num1 = float(input(" Please Enter the First Value  Num1 : "))
+num2 = float(input(" Please Enter the Second Value Num2 : "))
 
-# initialize sum
-sum = 0
+#calculate the HCF of user entered number
+while(num2 != 0):
+    temp = num2
+    num2 = num1 % num2
+    num1 = temp
 
-# find the sum of the cube of each digit
-temp = num
-while temp > 0:
-   digit = temp % 10
-   sum += digit ** 3
-   temp //= 10
+hcf = num1   
+#display the result
+print("HCF of num1 and num2 is",hcf)
 
-# display the result
-if num == sum:
-   print(num,"is an Armstrong number")
-else:
-   print(num,"is not an Armstrong number")
+
