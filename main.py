@@ -1,11 +1,8 @@
-#Take input from user
-print("Check your is between 10 to 20 years or not")
-x = int(input("enter your age: "))
-
-
-if x > 10: #condition 1
-  print("Your age is more than 10 years")
-  if x > 20: #nested condition
-    print("And it is more than 20 as well")
-  else:
-    print("But it is less not more than 20")
+age = int(input("how old are you?:"))
+if age >10:
+    if age>=10 and age<=20:
+        print("you are allowed in class age limit in between 10 and 20")
+    else:
+        print("you are not allowed in class")
+else:
+    print("you are too young for the class")
