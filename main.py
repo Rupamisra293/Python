@@ -1,26 +1,10 @@
-#Ask user to enter a number
-Number = int(input(" Please Enter any Number: "))
-Sum = 0 #initialise
-Temp = Number 
+#Take input of number of rows
+n=int(input("enter the number of rows: "))
 
-while(Temp > 0): #using while loop
-    Factorial = 1   # fact variable with 1  
-    #intialize with 1  
-    i = 1
-    Reminder = Temp % 10
-
-    while(i <= Reminder):
-        Factorial = Factorial * i # Find factorial of each number  
-        i = i + 1
-
-    print("\n Factorial of %d = %d" %(Reminder, Factorial))
-    Sum = Sum + Factorial
-    Temp = Temp // 10
-    
-#display output
-print("\n Sum of Factorials of a Given Number %d = %d" %(Number, Sum))
-    
-if (Sum == Number):
-    print(" %d is a Strong Number" %Number)
-else:
-    print(" %d is not a Strong Number" %Number)
+#iterate loop for row
+for i in range(n):
+  #loop for columns
+    for j in range(n):
+        if j == i:
+          print(i, j)
+ 
