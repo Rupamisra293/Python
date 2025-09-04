@@ -1,26 +1,26 @@
-#Input a number 
-num = int(input("Enter the number : "))
-t = num
-numLen = 0
-#iterate the loop
-while t>0: 
-  numLen = numLen+1
-  t = int(t/10)
+#Ask user to enter a number
+Number = int(input(" Please Enter any Number: "))
+Sum = 0 #initialise
+Temp = Number 
 
-if numLen>=4: #condition 1
-  numLen = int(numLen/2)
-  chk = 0
-  while num>0: #iterate loop
-    rem = num%10
-    if chk==numLen: #nested condition 1
-      midOne = rem
-    elif chk==(numLen-1): 
-      midTwo = rem
-    num = int(num/10)
-    chk = chk+1
-  prod = midOne*midTwo #product of middle digits
-  #display the result
-  print("\nProduct of Mid digits (" +str(midOne)+ "*" +str(midTwo)+ ") = ", prod)
+while(Temp > 0): #using while loop
+    Factorial = 1   # fact variable with 1  
+    #intialize with 1  
+    i = 1
+    Reminder = Temp % 10
 
+    while(i <= Reminder):
+        Factorial = Factorial * i # Find factorial of each number  
+        i = i + 1
+
+    print("\n Factorial of %d = %d" %(Reminder, Factorial))
+    Sum = Sum + Factorial
+    Temp = Temp // 10
+    
+#display output
+print("\n Sum of Factorials of a Given Number %d = %d" %(Number, Sum))
+    
+if (Sum == Number):
+    print(" %d is a Strong Number" %Number)
 else:
-  print("\nIt's not a 4 or more than 4-digit number!")
+    print(" %d is not a Strong Number" %Number)
