@@ -1,20 +1,9 @@
-rowNum = 5 #initialised number of rows 5
-space = rowNum-1
-
-for i in range(1, rowNum+1): #loops for rows
-  for j in range(1, space+1): #loop for space 
-    print(end=" ")
-  space = space-1
-  
-  for j in range(2*i-1): #loop for upper part of diamond
-    print(end="*")
-  print()
-space = 1
-#loops for lower part of diamond
-for i in range(1, rowNum):
-  for j in range(1, space+1):
-    print(end=" ")
-  space = space+1
-  for j in range(1, 2*(rowNum-i)): 
-    print(end="*")
-  print()
+#input the number of rows
+N = int(input("enter number of rows: "))
+#input the number of columns
+M = int(input("enter number of columns: "))
+for i in range(1, N, 2): #iterate for loop
+    print((i * ".|.").center(M,"-")) #display output
+print("WELCOME".center(M, "-"))
+for i in range(N-2, -1, -2):
+    print((i * ".|.").center(M, "-"))    
