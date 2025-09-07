@@ -1,9 +1,14 @@
-#input the number of rows
-N = int(input("enter number of rows: "))
-#input the number of columns
-M = int(input("enter number of columns: "))
-for i in range(1, N, 2): #iterate for loop
-    print((i * ".|.").center(M,"-")) #display output
-print("WELCOME".center(M, "-"))
-for i in range(N-2, -1, -2):
-    print((i * ".|.").center(M, "-"))    
+import turtle    #importing library
+turtle.Screen().bgcolor("orange")
+turtle.Screen().setup(300,400)
+polygon = turtle.Turtle() #defined variable
+ 
+num_sides = 6 #variable
+side_length = 70
+angle = 360.0 / num_sides
+#iterate loop for total number of side
+for i in range(num_sides):
+    polygon.forward(side_length)
+    polygon.right(angle)
+     
+turtle.done()
