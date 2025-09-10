@@ -1,8 +1,12 @@
-import math  
-print(math.sin(45))
-print(math.cos(45))
-print(math.tan(45))
+import math  #importing math module
 
-print(math.ceil(45.490))
-print(math.floor(45.890))
-print(math.factorial(5))
+x = float('nan')
+if math.isnan(x): #to check whether the given value is number or not
+    print('It is not a number')
+x = float('inf')
+y = 45
+if math.isinf(x): #to check whether the given number is infinite or not
+    print('It is Infinity')
+print(math.isfinite(x)) #x is not a finite number
+print(math.isfinite(y)) #y is a finite number
+print(math.isnan(y))
