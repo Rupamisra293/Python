@@ -1,33 +1,21 @@
-def add(P, Q):
-   return P+Q
+def squareperi(x):
+  perimeter=4*x
+  print("perimeter of square is",perimeter)
 
-def subtract(P, Q):
-  return P - Q
+def rectangleperi(l,b):
+  perimeter = 2*(l+b)
+  return perimeter
 
-def multiply(P, Q):
-  return P * Q
+def circumference(r):
+  c=2*3.14*r
+  print("circumference of circle is",c)
 
-def divide(P, Q):
- return P / Q
-# Now we will take inputs from the user
-print("Please select operation.")
-print("a. Add")
-print("b. Subtract")
-print("c. Multiply")
-print("d. Divide")
+r=int(input("enter radius of circle:"))
+circumference(r)
 
-choice = input("Please enter choice (a/b/c/d):")
+x=int(input("Enter side of square->"))
+squareperi(x)
 
-num_1 = int(input("Please enter the first number: "))
-num_2 = int(input("Please enter the second number: "))
-
-if choice == 'a':
-  print(num_1, "+", num_2, "=", add(num_1, num_2))
-elif choice == 'b':
-  print(num_1, "-", num_2, "=", subtract(num_1, num_2))
-elif choice == 'c':
-  print(num_1, "*", num_2, "=", multiply(num_1, num_2))
-elif choice == 'd':
-  print(num_1, "/", num_2, "=", divide(num_1, num_2))
-else:
-  print("This is an invalid input")
+l = int(input("Enter length of rectangle->"))
+b = int(input("Enter breadth of rectangle->"))
+print(rectangleperi(l,b))
