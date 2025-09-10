@@ -1,19 +1,20 @@
-def check_age(age):
-    try:
-        # Convert the input to an integer
-        age = int(age)
-        # Check if the age is a positive integer
-        if age < 0:
-            raise ValueError("Age cannot be negative.")
-        # Check if the age is even or odd
-        if age % 2 == 0:
-            print("The age {age} is even.")
-        else:
-            print("The age {age} is odd.")
-    
-    except ValueError as e:
-# Handle the exception if the input is not a valid integer or is negative
-        print(f"Invalid age entered: {e}")
-# Example usage:
-user_input = input("Enter your age: ")
-check_age(user_input)
+def enterage(age):
+
+#define function to take input as natural number
+    if age < 0:  #condition 1
+        raise ValueError("Only positive integers are allowed")
+    if age % 2 == 0: #condition 2
+        print("age is even")
+    else:
+        print("age is odd")
+
+try: 
+    num = int(input("Enter your age: "))
+    enterage(num)
+
+#handles value error exception    
+except ValueError:
+    print("Only positive integers are allowed")
+	
+except:
+    print("something is wrong")
