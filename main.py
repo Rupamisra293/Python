@@ -1,6 +1,9 @@
-import calendar
-c = calendar.TextCalendar(calendar.TUESDAY)
+import datetime as dt  
+    
+# using now() to get current time  
+current_time = dt.datetime.now()  
+    
+# Printing value of now.  
+print("Time now at Malaysia is : ", end = "")
 
-str = c.formatmonth(2022,6)
-print("calender for the month is")
-print(str)
+print(current_time)
