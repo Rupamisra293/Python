@@ -1,8 +1,11 @@
-import os
-
-shutdown = input("do you wish to shutdown your computer ? (yes or no):")
-
-if shutdown == 'no':
- exit()
-else:
-  os.system("shutdown /s /t 1")
+#Take user input
+a = input ("Enter a word: ")
+#program to check break keyword
+for i in a: #iterate for loop
+  if (i == 'A'): #condition 1
+  #display result
+    print ("A is found") 
+    break #break statement
+  else:
+  #display result
+    print ("A not found")
