@@ -1,20 +1,16 @@
-def enterage(age):
-
-#define function to take input as natural number
-    if age < 0:  #condition 1
-        raise ValueError("Only positive integers are allowed")
-    if age % 2 == 0: #condition 2
-        print("age is even")
-    else:
-        print("age is odd")
-
-try: 
-    num = int(input("Enter your age: "))
-    enterage(num)
-
-#handles value error exception    
-except ValueError:
-    print("Only positive integers are allowed")
-	
-except:
-    print("something is wrong")
+import random #importing module
+playing = True #initialise
+number = str(random.randint(10,20)) #random in-built function
+ 
+print("I will generate a number from 10 to 20, and you have to guess the number one digit at a time.")
+print("The game ends when you get 1 hero!")
+#iterate loop till the condition is true    
+while playing:
+  guess = input("Give me your best guess! \n")
+  if number == guess:
+    print("You win the game")
+    print("The number was",number)
+    break 
+    
+  else:
+    print("Your guess isn't quite right, try again. \n")
