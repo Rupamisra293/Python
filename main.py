@@ -1,13 +1,8 @@
-def employee(name):
-  print(name)
+import os
 
-def salary(exp):
-  if exp>=5:
-    return 3000000
-  elif exp>=3:
-    return 1000000
-  else:
-    return 500000
-employee("Ram")
-a = salary(15)
-print("The salary of the employee is ",a)
+shutdown = input("do you wish to shutdown your computer ? (yes or no):")
+
+if shutdown == 'no':
+ exit()
+else:
+  os.system("shutdown /s /t 1")
