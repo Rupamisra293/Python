@@ -1,11 +1,17 @@
-#importing math
-#using maths function for calculating trignometric values
-import math 
+import random
 
-a = math.sin(0.5)
-b = math.cos(0.5)
-c = math.tan(0.5)
+import time
 
-print("value of sin(0.5)= ",a)
-print("value of cos(0.5)= ",b)
-print("value of tan(0.5)= ",c)
+
+def getRandomDate(starDate, endDate):
+    print("Printing random date between", starDate, "and", endDate)
+    randomGenerator = random.random()
+    dateFormat = '%m/%d/%Y'
+    starttime = time.mktime(time.strptime(starDate, dateFormat))
+    endtime = time.mktime(time.strptime(endDate, dateFormat))
+    randomTime = starttime + randomGenerator * (endtime - starttime)
+    randomDate = time.strftime(dateFormat, time.localtime(randomTime))
+    return randomDate
+
+
+print("Random Date = ", getRandomDate("1/1/2020", "12/12/2024"))
