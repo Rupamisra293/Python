@@ -1,16 +1,21 @@
-import random #importing module
-playing = True #initialise
-number = str(random.randint(10,20)) #random in-built function
- 
-print("I will generate a number from 10 to 20, and you have to guess the number one digit at a time.")
-print("The game ends when you get 1 hero!")
-#iterate loop till the condition is true    
-while playing:
-  guess = input("Give me your best guess! \n")
-  if number == guess:
-    print("You win the game")
-    print("The number was",number)
-    break 
-    
-  else:
-    print("Your guess isn't quite right, try again. \n")
+import random
+
+options = ["Rock", "Paper", "Scissors"]
+
+user_choice = input("Choose Rock, Paper, or Scissors: ")
+
+computer_choice = random.choice(options)
+
+print("You chose:", user_choice)
+print("Computer chose:", computer_choice)
+
+if user_choice == computer_choice:
+    print("It's a tie!")
+elif user_choice == "Rock" and computer_choice == "Scissors":
+    print("Rock smashes scissors! You win!")
+elif user_choice == "Paper" and computer_choice == "Rock":
+    print("Paper covers rock! You win!")
+elif user_choice == "Scissors" and computer_choice == "Paper":
+    print("Scissors cuts paper! You win!")
+else:
+    print("You lose!. ")
