@@ -1,12 +1,13 @@
-import math  #importing math module
+import math #importing module
 
-x = float('nan')
-if math.isnan(x): #to check whether the given value is number or not
-    print('It is not a number')
-x = float('inf')
-y = 45
-if math.isinf(x): #to check whether the given number is infinite or not
-    print('It is Infinity')
-print(math.isfinite(x)) #x is not a finite number
-print(math.isfinite(y)) #y is a finite number
-print(math.isnan(y))
+#isclose function to check whether to value are close or not
+
+print(math.isclose(12.014, 12.56))
+
+print(math.isclose(12.014, 12.014))
+
+print(math.isclose(12.45, 12.46))
+
+print(math.isclose(12.014, 12.434, abs_tol = 0.5))
+
+print(math.isclose(12.014, 12.018, rel_tol = 0.2))
