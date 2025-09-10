@@ -1,13 +1,11 @@
-import math #importing module
+#importing math
+#using maths function for calculating trignometric values
+import math 
 
-#isclose function to check whether to value are close or not
+a = math.sin(0.5)
+b = math.cos(0.5)
+c = math.tan(0.5)
 
-print(math.isclose(12.014, 12.56))
-
-print(math.isclose(12.014, 12.014))
-
-print(math.isclose(12.45, 12.46))
-
-print(math.isclose(12.014, 12.434, abs_tol = 0.5))
-
-print(math.isclose(12.014, 12.018, rel_tol = 0.2))
+print("value of sin(0.5)= ",a)
+print("value of cos(0.5)= ",b)
+print("value of tan(0.5)= ",c)
