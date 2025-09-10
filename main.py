@@ -1,15 +1,33 @@
-# Function to calculate factorial
-def factorial(n):
-    if n == 0 or n == 1:  # Base case: 0! and 1! are both 1
-        return 1
-    else:
-        return n * factorial(n - 1)  # Recursive call
+def add(P, Q):
+   return P+Q
 
-# Input from user
-num = int(input("Enter a number: "))
+def subtract(P, Q):
+  return P - Q
 
-# Check if the number is negative
-if num < 0:
-    print("Factorial does not exist for negative numbers.")
+def multiply(P, Q):
+  return P * Q
+
+def divide(P, Q):
+ return P / Q
+# Now we will take inputs from the user
+print("Please select operation.")
+print("a. Add")
+print("b. Subtract")
+print("c. Multiply")
+print("d. Divide")
+
+choice = input("Please enter choice (a/b/c/d):")
+
+num_1 = int(input("Please enter the first number: "))
+num_2 = int(input("Please enter the second number: "))
+
+if choice == 'a':
+  print(num_1, "+", num_2, "=", add(num_1, num_2))
+elif choice == 'b':
+  print(num_1, "-", num_2, "=", subtract(num_1, num_2))
+elif choice == 'c':
+  print(num_1, "*", num_2, "=", multiply(num_1, num_2))
+elif choice == 'd':
+  print(num_1, "/", num_2, "=", divide(num_1, num_2))
 else:
-    print(f"The factorial of {num} is {factorial(num)}")
+  print("This is an invalid input")
