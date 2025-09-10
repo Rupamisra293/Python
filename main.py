@@ -1,33 +1,13 @@
-def add(P, Q):
-   return P+Q
+def employee(name):
+  print(name)
 
-def subtract(P, Q):
-  return P - Q
-
-def multiply(P, Q):
-  return P * Q
-
-def divide(P, Q):
- return P / Q
-# Now we will take inputs from the user
-print("Please select operation.")
-print("a. Add")
-print("b. Subtract")
-print("c. Multiply")
-print("d. Divide")
-
-choice = input("Please enter choice (a/b/c/d):")
-
-num_1 = int(input("Please enter the first number: "))
-num_2 = int(input("Please enter the second number: "))
-
-if choice == 'a':
-  print(num_1, "+", num_2, "=", add(num_1, num_2))
-elif choice == 'b':
-  print(num_1, "-", num_2, "=", subtract(num_1, num_2))
-elif choice == 'c':
-  print(num_1, "*", num_2, "=", multiply(num_1, num_2))
-elif choice == 'd':
-  print(num_1, "/", num_2, "=", divide(num_1, num_2))
-else:
-  print("This is an invalid input")
+def salary(exp):
+  if exp>=5:
+    return 3000000
+  elif exp>=3:
+    return 1000000
+  else:
+    return 500000
+employee("Ram")
+a = salary(15)
+print("The salary of the employee is ",a)
