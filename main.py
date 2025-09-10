@@ -1,5 +1,6 @@
-for i in range(21):
-    if i % 10==0:
-      print(i)
-      continue
-    print("the value is",i)
+for numb in range(1,5): #example 1 
+  if numb==2:
+  #using pass function
+    pass
+  else:
+    print ("Present Number =  {} ".format(numb))
