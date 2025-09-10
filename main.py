@@ -1,9 +1,12 @@
-import datetime as dt  
-    
-# using now() to get current time  
-current_time = dt.datetime.now()  
-    
-# Printing value of now.  
-print("Time now at Malaysia is : ", end = "")
+# importing calendar module
+import calendar
 
-print(current_time)
+yy = 2021 # year
+mm = 12    # month
+
+# To take month and year input from the user
+# yy = int(input("Enter year: "))
+# mm = int(input("Enter month: "))
+
+# display the calendar
+print(calendar.month(yy, mm))
