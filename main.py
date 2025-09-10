@@ -1,21 +1,17 @@
-def squareperi(x):
-  perimeter=4*x
-  print("perimeter of square is",perimeter)
+def DecimalToBinary(num):
+    if num >= 1:
+        DecimalToBinary(num // 2)
+    print(num % 2, end='')
 
-def rectangleperi(l,b):
-  perimeter = 2*(l+b)
-  return perimeter
+# Adding a newline after each binary conversion for clarity
+print("Binary of 5:", end=' ')
+DecimalToBinary(5)
+print()  # Newline
 
-def circumference(r):
-  c=2*3.14*r
-  print("circumference of circle is",c)
+print("Binary of 23:", end=' ')
+DecimalToBinary(23)
+print()  # Newline
 
-r=int(input("enter radius of circle:"))
-circumference(r)
-
-x=int(input("Enter side of square->"))
-squareperi(x)
-
-l = int(input("Enter length of rectangle->"))
-b = int(input("Enter breadth of rectangle->"))
-print(rectangleperi(l,b))
+print("Binary of 5:", end=' ')
+DecimalToBinary(5)
+print()  # Newline
