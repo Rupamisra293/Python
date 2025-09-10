@@ -1,6 +1,13 @@
-import math
+num = 29
+flag = False
 
-radius = float (input("enter the radius of a circle:"))
+# check for factors
+for i in range(2, num):
+    if (num % i) == 0:
+        flag = True
+        break
 
-circumference= 2*math.pi* radius
-print("circumference of a circle is :%.2f "% circumference)
+if flag:
+    print(num, "is not a prime number")
+else:
+    print(num, "is a prime number")
